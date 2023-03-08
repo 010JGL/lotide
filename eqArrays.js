@@ -13,11 +13,6 @@ const eqArrays = function(a, b, c) {
   c = JSON.stringify(a) === JSON.stringify(b);
   return c;
 };
-//            j   j   j
-// (eqArrays([1, 2, 3], i
-        //   [1, 2, 3]))i
-
-
 
 
 assertEqual(eqArrays([1, 2, 3], [1, 2, 3]), true) // => true
