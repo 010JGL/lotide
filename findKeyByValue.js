@@ -16,8 +16,6 @@ const bestTVShowsByGenre = {
   drama:  "The Wire"
 };
 
-
-
 const findKeyByValue = function(object, value) {      // takes in object, and value
   const objectList = Object.keys(object);             // transfer object into an array
   for (let key in objectList) {                       // loop every key in our list
@@ -26,9 +24,6 @@ const findKeyByValue = function(object, value) {      // takes in object, and va
     }
   }   
 };
-
-
-
 
 assertEqual(findKeyByValue(bestTVShowsByGenre, "The Wire"), "drama");
 assertEqual(findKeyByValue(bestTVShowsByGenre, "That '70s Show"), undefined);

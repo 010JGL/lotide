@@ -5,6 +5,23 @@ const assertEqual = function(actual, expected) {
     console.log(`🛑🛑🛑 Assertion Failed: ${actual} !== ${expected}`);
   }
 };
+
+const countLetters = function(str) {
+  let result = {};                           // create empty object to store data and return it
+  const lowercaseStr = str.toLowerCase();    // makes our string lowercase
+
+  for (let letter of lowercaseStr) {         // loop to fin letter in string
+    if (result[letter]) {                    // if result has letter
+      result[letter]++;                      // increment it by 1
+    } else {
+      result[letter] = 1;                    // if it doesnt have letter, create it
+    }
+  }
+  return result;
+}
+
+console.log(countLetters('Dancing in the night, with an owl'));
+
 /*      This works but too long
 const countLetters = function(str) {
   let letters = {a: 0, b: 0, c: 0, d: 0, e: 0, f: 0, g: 0, h: 0, i: 0, j: 0, k: 0, l: 0, m: 0, n: 0, o: 0, p: 0, q: 0, u: 0, v: 0, r: 0, s: 0, t: 0, w: 0, x: 0, y: 0, z: 0}
@@ -93,19 +110,3 @@ const countLetters = function(str) {
 console.log(countLetters("lighthouse in the house"));
 
 */
-
-const countLetters = function(str) {
-  let result = {};                           // create empty object to store data and return it
-  const lowercaseStr = str.toLowerCase();    // makes our string lowercase
-
-  for (let letter of lowercaseStr) {         // loop to fin letter in string
-    if (result[letter]) {                    // if result has letter
-      result[letter]++;                      // increment it by 1
-    } else {
-      result[letter] = 1;                    // if it doesnt have letter, create it
-    }
-  }
-  return result;
-}
-
-console.log(countLetters('Dancing in the night, with an owl'));
