@@ -1,3 +1,6 @@
+const eqArrays = require('./eqArrays');
+const assertEqual = require('./assertEqual');
+
 const letterPositions = function(sentence) {
   const results = {};                         // creates an empty object to return
   for (i = 0; i < sentence.length; i++) {     // loop the whole sentence 
@@ -12,22 +15,9 @@ const letterPositions = function(sentence) {
   return results;
 };
 
-const eqArrays = function(a, b, c) {
-  c = JSON.stringify(a) === JSON.stringify(b);
-  return c;
-};
-
-
-const assertArraysEqual = function(actual, expected) {
-  if (eqArrays(actual, expected) == true) {        // compares the function return with true
-    console.log(`✅✅✅ Assertion Passed: ${actual} === ${expected}`)
-  }
-  else {
-    console.log(`🛑🛑🛑 Assertion Failed: ${actual} !== ${expected}`)
-  }
-  return eqArrays(actual, expected);         // can use a function as a return
-};
 
 console.log(letterPositions("lighthouse in the house"));
 
 console.log(assertArraysEqual(letterPositions("hello").e, [1])); // dont forget to compare 2 values
+
+module.exports = letterPositions;

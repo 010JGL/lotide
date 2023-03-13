@@ -1,17 +1,5 @@
-const eqArrays = function (a, b, c) {
-  c = JSON.stringify(a) === JSON.stringify(b);
-  return c;
-};
-
-
-
-const assertEqual = function (actual, expected) {
-  if (actual === expected) {
-    console.log(`✅✅✅ Assertion Passed: ${actual} === ${expected}`);
-  } else {
-    console.log(`🛑🛑🛑 Assertion Failed: ${actual} !== ${expected}`);
-  }
-};
+const eqArrays = require('./eqArrays');
+const assertEqual = require('./assertEqual');
 
 // takes in 2 objects       returns true or false
 // gotta be perfect match
@@ -52,3 +40,4 @@ const longSleeveMultiColorShirtObject = { size: "medium", colors: ["red", "blue"
 assertEqual((eqObjects(multiColorShirtObject, longSleeveMultiColorShirtObject)), false); // => false
 
 
+module.exports = eqObjects;

@@ -1,20 +1,6 @@
-const eqArrays = function(a, b, c) {
-  c = JSON.stringify(a) === JSON.stringify(b);
-  return c;
-};
-
-
-const assertArraysEqual = function(actual, expected) {
-  if (eqArrays(actual, expected) == true) {        // compares the function return with true
-    console.log(`✅✅✅ Assertion Passed: ${actual} === ${expected}`)
-  }
-  else {
-    console.log(`🛑🛑🛑 Assertion Failed: ${actual} !== ${expected}`)
-  }
-  return eqArrays(actual, expected);         // can use a function as a return
-};
+const eqArrays = require('./eqArrays');
+const assertArraysEqual = require('./assertArraysEqual');
 // Return a slice of the array with elements taken from beginning. until we finda truthy value
-
 
 const takeUntil = function(array, callback) {   // takes one parameter and one call back
   
@@ -26,7 +12,6 @@ const takeUntil = function(array, callback) {   // takes one parameter and one c
   }
 
 };
-
 
 const data1 = [1, 2, 5, 7, 2, -1, 2, 4, 5];
 const results1 = takeUntil(data1, x => x < 0);
@@ -42,3 +27,5 @@ console.log(results2);
 
 assertArraysEqual(data1, [ 1, 2, 5, 7, 2 ]);
 assertArraysEqual(data2, [ 'I\'ve', 'been', 'to', 'Hollywood' ]);
+
+module.exports = takeUntil;
