@@ -8,7 +8,7 @@ const assertArraysEqual = function(actual, expected) {
   else {
     console.log(`🛑🛑🛑 Assertion Failed: ${actual} !== ${expected}`)
   }
-  return eqArrays(actual, expected);         // can use a function as a return
+  //return eqArrays(actual, expected);         // can use a function as a return
 };
 
 module.exports = assertArraysEqual;

@@ -1,6 +1,13 @@
-// const eqArrays = require('../eqArrays');        // doesnt require eqArrays directly
-const assertArraysEqual = require('../assertArraysEqual');
+
+const assert = require('chai').assert;
 const middle = require('../middle');
 
-console.log(assertArraysEqual(middle([1, 2, 3, 4, 5, 6]), [3, 4]));  // middle has to have arguments
-//                            actual                     expected
+describe("#middle", () => {
+  it("returns [3, 4] for [1, 2, 3, 4, 5, 6]", () => {           // deepEqual = compares the values inside. using === on each individual item array or object
+    assert.deepEqual(middle([1, 2, 3, 4, 5, 6]), [3, 4]);      // returns an array
+  });    
+  it("returns [2] for [1, 2, 3]", () => {
+    assert.deepEqual(middle([1, 2, 3]), [2]);
+  });
+
+});
