@@ -1,9 +1,4 @@
-
-
-const eqArrays = function(a, b, c) {
-  c = JSON.stringify(a) === JSON.stringify(b);
-  return c;
-};
+const eqArrays = require('./eqArrays');
 
 
 const assertArraysEqual = function(actual, expected) {
@@ -16,5 +11,5 @@ const assertArraysEqual = function(actual, expected) {
   return eqArrays(actual, expected);         // can use a function as a return
 };
 
-console.log('test', assertArraysEqual([1, 2, 3], [1, 2, 3]));
+module.exports = assertArraysEqual;
 
