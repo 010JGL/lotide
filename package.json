@@ -1,7 +1,7 @@
 {
-  "name": "lotide",
+  "name": "@010jgl/lotide",
   "version": "1.0.0",
-  "description": "",
+  "description": "lotide functions, lhl bootcamp",
   "main": "assertArraysEqual.js",
   "directories": {
     "test": "test"
@@ -13,7 +13,8 @@
     "type": "git",
     "url": "git+https://github.com/010JGL/lotide.git"
   },
-  "author": "",
+  "author": "Jeremy G.L",
+  "email": "010jgl@gmail.com",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/010JGL/lotide/issues"
